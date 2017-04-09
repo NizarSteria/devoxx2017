@@ -8,12 +8,18 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { EditComponent } from './edit/edit.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { OAuthModule } from 'angular-oauth2-oidc';
+import { HomeComponent } from './home/home.component';
+import { AuthGuard } from './shared/auth/auth.guard.service';
 
 const appRoutes: Routes = [
-  { path: 'search', component: SearchComponent },
-  { path: 'edit/:id', component: EditComponent },
-  { path: '', redirectTo: '/search', pathMatch: 'full' }
+  { path: 'search', component: SearchComponent, canActivate: [AuthGuard] },
+  { path: 'edit/:id', component: EditComponent, canActivate: [AuthGuard] },
+  { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', redirectTo: 'home' }
 ];
 
 
@@ -27,7 +33,8 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    NgbModule.forRoot(),
+    NgbModule,
+    OAuthModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
