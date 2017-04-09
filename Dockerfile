@@ -1,4 +1,4 @@
-FROM node
+FROM node:latest
 LABEL maintainer <aouissaoui.nizar@gmail.com>
 # Create app directory
 RUN mkdir -p /usr/src/app
@@ -13,4 +13,7 @@ COPY . /usr/src/app
 
 EXPOSE 4000
 CMD [ "npm", "start" ]
+
+# Build: docker build -f Dockerfile -t naouissaoui/node .
+
 
