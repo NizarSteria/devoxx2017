@@ -1,0 +1,4 @@
+= Angular Material
+yarn add @angular/material
+
+You can also use npm install --save @angular/material, but Yarn is faster.

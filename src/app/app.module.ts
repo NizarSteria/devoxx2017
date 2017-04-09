@@ -2,12 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { EditComponent } from './edit/edit.component';
+import { MaterialModule } from '@angular/material';
 
 const appRoutes: Routes = [
   { path: 'search', component: SearchComponent },
@@ -26,7 +26,9 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    MaterialModule,
+    RouterModule.forRoot(appRoutes, { useHash: true })
+
   ],
   providers: [],
   bootstrap: [AppComponent]
