@@ -1,6 +1,34 @@
 # NgDemo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+* This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+
+## Angular Concepts Covered
+* Using TypeScript classes and modules
+
+## Software Requirements To Run Locally (there's a Docker option below as well)
+* Node.js 7.0.0 or higher
+* Angular cli 1.0.0
+
+Nizar:ng-demo nizaraouissaoui$ ng --version
+    _                      _                 ____ _     ___
+   / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
+  / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
+ / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
+/_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
+               |___/
+* @angular/cli: 1.0.0
+* node: 7.7.4
+* os: darwin x64
+* @angular/common: 4.0.1
+* @angular/compiler: 4.0.1
+* @angular/core: 4.0.1
+* @angular/forms: 4.0.1
+* @angular/http: 4.0.1
+* @angular/platform-browser: 4.0.1
+* @angular/platform-browser-dynamic: 4.0.1
+* @angular/router: 4.0.1
+* @angular/cli: 1.0.0
+* @angular/compiler-cli: 4.0.1
 
 ## Development server
 
@@ -23,6 +51,3 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
