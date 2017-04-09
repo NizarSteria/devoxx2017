@@ -51,3 +51,12 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
 
+##Deployment
+This section shows you how to deploy an Angular app to Cloud Foundry and Heroku.
+
+##Build Cloud Foundry
+Create a Pivotal account and install the cf CLI. Then run the following commands to build and deploy your application.
+
+* ng build -prod --aot
+* cd dist && touch Staticfile
+* cf push ng-demo

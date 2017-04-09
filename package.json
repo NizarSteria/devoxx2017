@@ -4,7 +4,9 @@
   "author": "Nizar Aouissaoui <aouissaoui.nizar@gmail.com>",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "http-server-spa dist index.html $PORT",
+    "preinstall": "npm install -g http-server-spa",
+    "postinstall": "ng build -prod --aot",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
