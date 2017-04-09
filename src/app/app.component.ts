@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SearchService } from './shared/index';
+import { SearchService, AuthGuard } from './shared/index';
 
 import { OAuthService } from 'angular-oauth2-oidc';
 
@@ -7,7 +7,7 @@ import { OAuthService } from 'angular-oauth2-oidc';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  viewProviders: [SearchService]
+  viewProviders: [SearchService, AuthGuard]
 })
 export class AppComponent {
   title = 'app works!';
