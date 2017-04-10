@@ -2,16 +2,10 @@ import { Component } from '@angular/core';
 import { OAuthService } from 'angular-oauth2-oidc';
 
 @Component({
-  template: `<div *ngIf="givenName">
-<h2>Welcome, {{givenName}}!</h2>
-<button (click)="logout()">Logout</button>
-<p><a routerLink="/search" routerLinkActive="active">Search</a></p>
-</div>
-
-<div *ngIf="!givenName">
-    <button (click)="login()">Login</button>
-</div>`
+  selector: 'app-home',
+  templateUrl: './home.component.html'
 })
+
 export class HomeComponent {
   constructor(private oauthService: OAuthService) {
   }
