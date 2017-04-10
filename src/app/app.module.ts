@@ -27,6 +27,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     SearchComponent,
+    HomeComponent,
     EditComponent
   ],
   imports: [
